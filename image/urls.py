@@ -21,7 +21,8 @@ app_name='image'
 
 urlpatterns = [
     path('predict', views.ImagePredict.as_view(), name='predict'),
-    path('predictb64', views.ImagePredictB64.as_view(), name='predict64')
+    path('predictb64', views.ImagePredictB64.as_view(), name='predict64'),
+    path('predictGif', views.GifPredict.as_view(), name='predictGif')
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
