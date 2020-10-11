@@ -97,7 +97,7 @@ api = sly.Api(SERVER, token)
 # Create your views here.
 img_width = 416
 img_height = 416
-model_id = 22663
+model_id = 22671
 file_types = ['png','jpg','jpeg','gif']   
 
 class ImagePredict(APIView):
@@ -266,7 +266,7 @@ class GifPredict(APIView):
                         gif.seek(gif.tell() + 1)
                 except EOFError:
                     pass
-                print(len(images))
+                print("quantidade de frames: "+ str(len(images)))
                 print("gif convertido...")
                 meta_json = api.model.get_output_meta(model_id)
                 model_meta = sly.ProjectMeta.from_json(meta_json)
